@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Specifies the character encoding for the HTML document -->
+  <meta charset="UTF-8">
+  <!-- Sets the viewport to make the website responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the webpage -->
+  <title>Ball Loader</title>
+  <!-- Links the external CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Div for the loader animation -->
+  <div class="loader"></div>
+  <!-- Div for the shadow animation -->
+  <div class="shadow"></div>
+  <!-- Links the external JavaScript file -->
+  <script src="index.js"></script>
+</body>
+</html>
