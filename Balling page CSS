@@ -1,0 +1,91 @@
+/* Ensures the body takes up the full viewport height */
+body {
+  min-height: 100vh;
+  margin: 0; /* Removes default margin */
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  flex-direction: column; /* Arranges items in a column */
+  align-items: center; /* Centers content vertically */
+  background: white; /* Sets background color */
+  font-family: "Poppins", "sans-serif"; /* Sets font family */
+}
+
+/* Styles for the shadow element */
+.shadow {
+  height: 10px; /* Sets the height */
+  width: 30px; /* Sets the width */
+  background: black; /* Sets the background color */
+  filter: blur(10px); /* Applies a blur effect */
+  animation: forwards shadow 3s; /* Adds animation */
+}
+
+/* Styles for the loader element */
+.loader {
+  background: rgb(248, 196, 196); /* Sets background color */
+  transform: translate(0, -50px); /* Moves the element up */
+  z-index: 1; /* Sets stacking order */
+  height: 50px; /* Sets the height */
+  width: 50px; /* Sets the width */
+  border-radius: 50%; /* Makes the element circular */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); /* Adds a shadow */
+  animation: forwards 3s hop; /* Adds animation */
+}
+
+/* Keyframes for shadow animation */
+@keyframes shadow {
+  0% {
+    width: 50px; /* Initial width */
+    opacity: 1; /* Initial opacity */
+  }
+  25% {
+    width: 30px; /* Reduced width */
+    opacity: 1; /* Maintains opacity */
+  }
+  50% {
+    transform: translateY(0); /* Maintains position */
+    opacity: 1; /* Maintains opacity */
+  }
+  75% {
+    width: 50px; /* Restores width */
+    opacity: 1; /* Maintains opacity */
+  }
+  100% {
+    opacity: 0; /* Fades out */
+  }
+}
+
+/* Keyframes for hop animation */
+@keyframes hop {
+  0% {
+    transform: translateY(0); /* Initial position */
+    width: 50px; /* Initial width */
+    height: 50px; /* Initial height */
+    border-radius: 50%; /* Initial shape */
+  }
+  25% {
+    transform: translateY(-50px); /* Moves up */
+    width: 50px; /* Maintains width */
+    height: 50px; /* Maintains height */
+    border-radius: 50%; /* Maintains shape */
+  }
+  50% {
+    transform: translateY(6px); /* Moves down slightly */
+    width: 50px; /* Maintains width */
+    height: 44px; /* Reduces height */
+    border-radius: 50%; /* Maintains shape */
+  }
+  75% {
+    transform: translateY(-50px); /* Moves up again */
+    width: 50px; /* Maintains width */
+    height: 50px; /* Restores height */
+    border-radius: 50%; /* Maintains shape */
+  }
+  90% {
+    border-radius: 20%; /* Changes shape */
+  }
+  100% {
+    width: 100%; /* Expands width */
+    height: 100vh; /* Expands height */
+    border-radius: 0; /* Becomes rectangular */
+  }
+}
