@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-135deg, #EA8D8D, #A890FE);
+}
+
+.input-boxes {
+  width: 450px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.input-boxes .input1 {
+  height: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.input-boxes .input1 input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid #A890FE;
+}
+
+.input1 input:focus ~ label,
+.input1 input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #EA8D8D;
+}
+
+.input-boxes .input1 label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #EA8D8D;
+  pointer-events: none;
+  transition: transform 0.5s ease;
+}
+
+.input-boxes .input1 .underline {
+  position: absolute;
+  bottom: 0px;
+  height: 2px;
+  width: 100%;
+/
+}
+
+.input1 .underline:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #EA8D8D;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.input1 input:focus ~ .underline:before,
+.input1 input:valid ~ .underline:before {
+  transform: scaleX(1);
+
+}
