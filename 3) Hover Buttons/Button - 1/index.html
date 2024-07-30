@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- The head section contains meta-information about the document -->
+  <head>
+    <!-- Specifies the character encoding for the HTML document -->
+    <meta charset="UTF-8" />
+    <!-- Sets the viewport to make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The title of the web page, displayed on the browser tab -->
+    <title>Anime Button</title>
+
+    <!-- Internal CSS to style the HTML elements -->
+    <style>
+      /* Style for the body element */
+      body {
+        width: 100vw; /* Set the width to 100% of the viewport width */
+        height: 100vh; /* Set the height to 100% of the viewport height */
+        margin: 0; /* Remove default margin */
+        display: flex; /* Use flexbox layout */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        background: #222; /* Set background color to dark gray */
+        overflow: hidden; /* Hide overflowing content */
+        font-family: Arial, Helvetica, sans-serif; /* Set font family */
+        font-size: 20px; /* Set font size */
+        color: white; /* Set text color to white */
+      }
+
+      /* Style for the button class */
+      .button {
+        width: 200px; /* Set button width */
+        height: 50px; /* Set button height */
+        background: black; /* Set button background color */
+        position: relative; /* Position relative to allow absolute positioning of children */
+        display: flex; /* Use flexbox layout */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6); /* Add box shadow */
+        transition: 0.5s; /* Transition effect for hover */
+      }
+
+      /* Style for the :before pseudo-element of button */
+      .button:before {
+        content: ""; /* Empty content */
+        position: absolute; /* Absolute positioning */
+        left: 0; /* Align to the left */
+        top: 0; /* Align to the top */
+        width: 0; /* Initial width */
+        height: 0; /* Initial height */
+        border-top: 2px solid white; /* Top border */
+        border-right: 2px solid white; /* Right border */
+        animation: border-top-right 3s infinite alternate; /* Animation */
+      }
+
+      /* Style for the :after pseudo-element of button */
+      .button:after {
+        content: ""; /* Empty content */
+        position: absolute; /* Absolute positioning */
+        right: 0; /* Align to the right */
+        bottom: 0; /* Align to the bottom */
+        width: 0; /* Initial width */
+        height: 0; /* Initial height */
+        border-bottom: 2px solid white; /* Bottom border */
+        border-left: 2px solid white; /* Left border */
+        animation: border-bottom-left 3s infinite alternate; /* Animation */
+      }
+
+      /* Hover effect for the button */
+      .button:hover {
+        background: rgb(19, 17, 17); /* Change background color */
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6); /* Intensify box shadow */
+      }
+
+      /* Keyframes for the border-top-right animation */
+      @keyframes border-top-right {
+        0% {
+          width: 0px; /* Initial width */
+          height: 0px; /* Initial height */
+        }
+        25% {
+          width: 200px; /* Expand width */
+          height: 0px; /* Keep height */
+        }
+        50% {
+          width: 200px; /* Keep width */
+          height: 48px; /* Expand height */
+        }
+        100% {
+          width: 200px; /* Keep width */
+          height: 48px; /* Keep height */
+        }
+      }
+
+      /* Keyframes for the border-bottom-left animation */
+      @keyframes border-bottom-left {
+        0% {
+          width: 0px; /* Initial width */
+          height: 0px; /* Initial height */
+          opacity: 0; /* Initial opacity */
+        }
+        50% {
+          width: 0px; /* Keep width */
+          height: 0px; /* Keep height */
+          opacity: 0; /* Keep opacity */
+        }
+        <!-- To know about this first add and see the result and then add and see the result-->
+        50.1% {
+          width: 0px; /* Keep width */
+          height: 0px; /* Keep height */
+          opacity: 1; /* Change opacity to visible */
+        }
+        75% {
+          width: 200px; /* Expand width */
+          height: 0px; /* Keep height */
+          opacity: 1; /* Keep opacity */
+        }
+        100% {
+          width: 200px; /* Keep width */
+          height: 48px; /* Expand height */
+          opacity: 1; /* Keep opacity */
+        }
+      }
+    </style>
+  </head>
+
+  <!-- The body section contains the content of the document -->
+  <body>
+    <!-- A div element with the class 'button' containing the text 'Login' -->
+    <div class="button">Login</div>
+  </body>
+</html>
