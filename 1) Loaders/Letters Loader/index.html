@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader - 3</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .loader::before {
+        content: "";
+        font-family: "Poppins";
+        color: cadetblue;
+        font-weight: 600;
+        font-size: 30px;
+        letter-spacing: 0.5rem;
+        animation: animating-text 2.8s infinite;
+      }
+
+      @keyframes animating-text {
+        0% {
+          content: "L";
+        }
+        10% {
+          content: "Lo";
+        }
+        20% {
+          content: "Loa";
+        }
+        30% {
+          content: "Load";
+        }
+        40% {
+          content: "Loadi";
+        }
+        50% {
+          content: "Loadin";
+        }
+        60% {
+          content: "Loading";
+        }
+        70% {
+          content: "Loading.";
+        }
+        80% {
+          content: "Loading..";
+        }
+        90% {
+          content: "Loading...";
+        }
+        100% {
+          content: "Loading....";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+  </body>
+</html>
